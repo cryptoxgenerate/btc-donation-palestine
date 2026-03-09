@@ -58,11 +58,29 @@ cursor:pointer;
 .qr{
 margin-top:20px;
 }
-</style>.
+</style>.{background:#000;
+color:white;font-family:Arial;
+text-align:center;}
+
+.animation{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background: radial-gradient(circle,#0f2027,#000000);
+z-index:-1;
+animation: move 8s infinite alternate;
+}
+
+@keyframes move{
+0%{filter:hue-rotate(0deg);}
+100%{filter:hue-rotate(360deg);}
+}
 
 </head>
 
-<body>
+<body><div class="animation"></div>
 
 <div class="container">
 
@@ -95,7 +113,28 @@ var wallet=document.getElementById("wallet").innerText;
 navigator.clipboard.writeText(wallet);
 alert("Wallet address copied!");
 }
-</script>
+</script>body{
+background:#000;
+color:white;
+font-family:Arial;
+text-align:center;
+}
 
-</body>
+.animation{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background: radial-gradient(circle,#0f2027,#000000);
+z-index:-1;
+animation: move 8s infinite alternate;
+}
+
+@keyframes move{
+0%{filter:hue-rotate(0deg);}
+100%{filter:hue-rotate(360deg);}
+}
+
+</body><div class="animation"></div>
 </html>
