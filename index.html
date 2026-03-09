@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donate for Palestine</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+color:white;
+text-align:center;
+background:#000;
+}
+
+.container{
+max-width:600px;
+margin:auto;
+margin-top:80px;
+background:#111;
+padding:40px;
+border-radius:10px;
+}
+
+.wallet{
+background:#000;
+padding:15px;
+border-radius:8px;
+margin-top:15px;
+word-break:break-all;
+}
+
+button{
+margin-top:15px;
+padding:10px 20px;
+border:none;
+background:green;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+.qr{
+margin-top:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Donate for Palestine 🇵🇸</h1>
+
+<p>Support humanitarian aid using Bitcoin</p>
+
+<h3>Bitcoin Wallet</h3>
+
+<div class="wallet" id="wallet">
+bc1p6q4657fxxvhefsvk6gsxed724ywu8vufcyu5x4mc6nassjm2tyxsteu8w7
+</div>
+
+<button onclick="copyWallet()">Copy Wallet</button>
+
+<div class="qr">
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=bc1p6q4657fxxvhefsvk6gsxed724ywu8vufcyu5x4mc6nassjm2tyxsteu8w7">
+</div>
+
+</div>
+
+<script>
+function copyWallet(){
+var wallet=document.getElementById("wallet").innerText;
+navigator.clipboard.writeText(wallet);
+alert("Wallet address copied!");
+}
+</script>
+
+</body>
+</html>
